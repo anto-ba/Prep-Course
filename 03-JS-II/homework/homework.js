@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const TemplatePassthroughManager = require("@11ty/eleventy/src/TemplatePassthroughManager");
+
 function obtenerMayor(x, y) {
   // "x" e "y" son números enteros (int).
   // Devuelve el número más grande
@@ -140,6 +142,7 @@ function estaEnRango(numero) {
 }
 
 function esEntero(numero) {
+  
   // Devuelve "true" si "numero" es un entero (int/integer)
   // Ejemplo: 0.8 -> false
   // Ejemplo: 1 -> true
@@ -147,7 +150,14 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-
+  if(Math.floor(numero) < numero)
+  {
+    return false;
+  }
+  else
+  {
+    return true;
+  }
 }
 
 function fizzBuzz(numero) {

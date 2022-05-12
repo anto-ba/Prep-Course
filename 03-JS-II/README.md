@@ -187,7 +187,7 @@ if (!false) {
 
 if (!(1 === 1)) {
     console.log('1 es igual a 1, de modo que la expresión devuelve true. El operador ! devolverá lo contrario de eso, por lo que este código NO se ejecutará');
-}
+}wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwdd    aaaaaaaaaaaaaaaaaaaaaaaa
 ```
 
 ### Notas sobre operadores lógicos

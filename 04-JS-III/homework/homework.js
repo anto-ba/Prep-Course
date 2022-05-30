@@ -218,7 +218,25 @@ function empiezaConNueve(n) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  
+  var acumulador = 1;
+  if(arreglo[0] === arreglo [1])
+  {
+    for(var i = 1; i < arreglo.length; i++)
+    {
+      if(arreglo[i] === arreglo [i+1])
+      {
+        acumulador = acumulador + 1;
+      }
+    }
+    if (acumulador === arreglo.length - 1)
+    {
+      return true;
+    }
+  }
+  else
+  {
+    return false;
+  }
 } 
 
 
@@ -227,6 +245,22 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var nuevoarray = [];
+  for(var i = 0; i < array.length; i++)
+  {
+    if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre")
+    {
+      nuevoarray.push(array[i]);
+    }
+  }
+  if(nuevoarray.length === 3)
+  {
+    return nuevoarray;
+  }
+  else if (nuevoarray.length !== 3)
+  {
+    return "No se encontraron los meses pedidos";
+  }
 }
 
 
@@ -234,6 +268,15 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+ /* var mayoresacien;
+  mayoresacien.filter(array => array[i] > 100);
+  return mayoresacien;
+  for(var i = 0; i < array.lengh; i++)
+  {
+
+  }*/
+  const mayoresacien = array.filter(value => value > 100);
+  return mayoresacien;
 }
 
 
@@ -245,8 +288,23 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-}
 
+  var array = [];
+ 
+    for(var i = 0; i < 10; i++)
+    {
+      numero += 2;
+      array.push(numero);      
+      //console.log (array);
+      if(numero === i)
+      {
+        return "Se interrumpió la ejecución";
+        break;        
+      }      
+      
+    }
+    return array;
+   }  
 
 function continueStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
@@ -255,6 +313,21 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var newArray = [];
+
+  for(var i = 0; i < 10; i++)
+  {
+    if(i === 5)
+    {
+      continue;
+    }
+    numero += 2;
+    newArray.push(numero);
+    console.log(i);
+    console.log(newArray)
+    
+  }
+  return newArray;
 }
 
 
